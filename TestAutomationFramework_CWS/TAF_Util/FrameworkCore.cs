@@ -33,7 +33,7 @@ namespace TestAutomationFramework_CWS.TAF_Util
 
             string url = ConfigurationManager.AppSettings["URL"];
             string projectName = ConfigurationManager.AppSettings["ApplicationtName"];
-            BaseDriver.Instance.Navigate().GoToUrl(url);
+            BaseDriver.GetInstance().Navigate().GoToUrl(url);
 
             Test.Info("Opening URL for " + projectName + " :: " + url.AsLink());
         }
@@ -76,13 +76,30 @@ namespace TestAutomationFramework_CWS.TAF_Util
                         break;
                 }
             }
-            if (BaseDriver.Instance.WindowHandles.Count != 0) BaseDriver.Instance.Dispose();
+            if (BaseDriver.GetInstance().WindowHandles.Count != 0) BaseDriver.GetInstance().Dispose();
         }
 
         [OneTimeSetUp]
         public static void OneTimeSetup()
         {
-            report = ExtentReporting.Instance;
+            report = ExtentExtention.Instance;
+            string strPat = @"\";
+            var location = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            var directory = System.IO.Path.GetDirectoryName(location);
+
+        }
+
+
+        [OneTimeTearDown]
+        public static void OneTimeTearDown()
+        {
+            var location = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            var directory = System.IO.Path.GetDirectoryName(location);
+            string strPath = FileOperations.GetReportLocation();
+
+            var NewFileName = "Report_" + DateTime.Now.ToString("dd-MM-yyyy_HHmmss") + ".html";
+
+            // Code to open the report after execution
         }
     }
 }
