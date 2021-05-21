@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+  <configuration>
+    <!-- Theme : standard, dark -->
+    <theme>dark</theme>
+
+    <!-- Document Encoding : defaults to UTF-8 -->
+    <encoding>UTF-8</encoding>
+
+    <!-- protocol for script and stylesheets -->
+    <!-- defaults to https -->
+    <protocol>https</protocol>
+
+    <!-- Title of the Document -->
+    <documentTitle>Extent Report</documentTitle>
+
+    <chartVisibilityOnOpen>true</chartVisibilityOnOpen>
+
+    <!-- report name - displayed at top-nav -->
+    <reportName>Test Automation Report</reportName>
+
+    <!-- location of charts in the test view -->
+    <!-- top, bottom -->
+    <testViewChartLocation>top</testViewChartLocation>
+
+    <!-- custom javascript -->
+    <scripts>
+      <![CDATA[
+                $(document).ready(function() {
+                    
+                });
+            ]]>
+    </scripts>
+
+    <!-- custom styles -->
+    <styles>
+      <![CDATA[
+                
+            ]]>
+    </styles>
+  </configuration>
+</extentreports>
