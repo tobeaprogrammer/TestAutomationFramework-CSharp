@@ -4,6 +4,8 @@
 <h5> Framework Details :</h5>
 <div>
 <table>
+  <tr><td><b>Framework Type</b></td><td>Data Driven</td></tr>
+  <tr><td><b>Execution Mode</b></td><td>Sequential, Parallelization achieved with Console Runner /.bat files</td></tr>
   <tr><td><b>Programming Language</b></td><td>C#</td></tr>
   <tr><td><b>Design Pattern</b></td><td>Page Object Model [POM]</td></tr>
   <tr><td><b>Testing Framework</b></td><td>NUnit</td></tr>
