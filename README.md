@@ -1,5 +1,5 @@
 
-# <a href="https://github.com/tobeaprogrammer/TestAutomation_SeleniumCSharp">Selenium C# Testing framework</a>
+# <a href="https://github.com/tobeaprogrammer/TestAutomation_SeleniumCSharp">Selenium C# Test Automation Framework : POM</a>
 
 <h5> Framework Details :</h5>
 <div>
