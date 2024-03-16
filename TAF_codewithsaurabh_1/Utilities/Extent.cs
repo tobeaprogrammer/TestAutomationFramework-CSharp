@@ -31,7 +31,7 @@ namespace TAF_codewithsaurabh_1.Utilities
             var location = System.Reflection.Assembly.GetExecutingAssembly().Location;
             var directory = System.IO.Path.GetDirectoryName(location);
             string Path = FileOperations.GetReportPath();
-            var htmlReporter = new ExtentHtmlReporter(Path + "Report.html");
+            var htmlReporter = new ExtentSparkReporter(Path + "Report.html");
             htmlReporter.LoadConfig(directory + @"\extent-config.xml");
 
             Instance.AttachReporter(htmlReporter);
